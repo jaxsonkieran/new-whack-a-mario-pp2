@@ -10,6 +10,20 @@
 body {
     font-family: 'Electrolize', sans-serif;
     text-align: center;
-    background: url('../images/mario-background.jpg') top no-repeat;
+    background: url('../images/mario-background.jpg') no-repeat;
     background-size: cover;
+    min-height: 100vh;
+    /* incase background image fails to load */
+    background-color: red;
+    color: #FBD000;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
 }
