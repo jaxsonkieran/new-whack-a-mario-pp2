@@ -115,3 +115,11 @@ h2 {
     margin: 0 auto;
 }
 
+.hole {
+    /* evenly fit into the 540x540 container */
+    width: 180px;
+    height: 180px;
+    /* only for style to get the game to work initially */
+    border: 1px solid #FBD000;
+}
+
