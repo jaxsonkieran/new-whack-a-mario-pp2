@@ -27,3 +27,24 @@ h2 {
     font-size: 1.5em;
     margin-bottom: 1em;
 }
+
+/* game controls and buttons */
+.game-controls {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#about-btn,
+#play-btn {
+    padding: 8px;
+    background-color: #049CD8;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#about-btn:hover,
+#play-btn:hover {
+    background-color: #FBD000;
+    color: #049CD8;
+}
+
