@@ -59,7 +59,7 @@ holes.forEach(hole => {
 function moveMario() {
     let timerId = null
     timerId = setInterval(randomHole, 800)
-    timeLeft(60);
+    timeLeft(20);
 }
 
 // moveMario();
