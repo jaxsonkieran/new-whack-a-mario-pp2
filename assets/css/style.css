@@ -97,3 +97,21 @@ h2 {
     font-size: 2vh;
 }
 
+
+
+.game-container {
+    height: 540px;
+    width: 540px;
+    /* background image by https://www.freepik.com/free-vector/brown-soil-texture-background_3478044.htm#query=soil%20background&position=2&from_view=keyword&track=ais&uuid=22617858-e0f0-414a-85ae-5cf2136088ea">Image by brgfx on Freepik */
+    background: url("../images/20483.jpg");
+    background-size: cover;
+    border: 1px solid #FBD000;
+    border-radius: 10px;
+    /* get the dics in 3x3 format and align to center */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
