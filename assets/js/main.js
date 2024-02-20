@@ -7,13 +7,19 @@
 const holes = document.querySelectorAll('.hole');
 const mario = document.querySelector('.mario');
 const score = document.querySelector('#score');
-const timeLeft = document.querySelector('#time-left');
+// const timeLeft = document.querySelector('#time-left');
 
 let hitTheMario;
 let result = 0;
-let currentTime = 60;
+// let currentTime = 60;
 
 
+// run the game with the play button
+let button = document.getElementById('play-btn');
+button.addEventListener("click", function () {
+    moveMario();
+    countDown();
+})
 /**
  * function to get the mario to appear in random holes on the container
  */
@@ -52,22 +58,34 @@ holes.forEach(hole => {
 function moveMario() {
     let timerId = null
     timerId = setInterval(randomHole, 800)
+    timeLeft(60);
 }
 
-moveMario();
+// moveMario();
 
 // create a function to get the timer to countdown
 /**
  * function that counts down the time
  */
-function countDown () {
-    currentTime--
-    timeLeft.textContent = currentTime
+// function countDown () {
+//     currentTime--
+//     timeLeft.textContent = currentTime
 
-    if(currentTime === 0){
-        clearInterval(countDownTimerId);
-        document.getElementById('time-up-alert').style.display = "block";
-    }
+//     if(currentTime === 0){
+//         clearInterval(countDownTimerId);
+//         document.getElementById('time-up-alert').style.display = "block";
+//     }
+// }
+
+// let countDownTimerId = setInterval(countDown, 1000);
+
+function timeLeft(seconds){
+    let countDown = setInterval(function (){
+        document.getElementById('time-left').innerHTML = seconds;
+        seconds--;
+        if (seconds === -1){
+            clearInterval(countDown);
+            document.getElementById('time-up-alert').style.display = "block";
+        }
+    }, 1000)
 }
-
-let countDownTimerId = setInterval(countDown, 1000);
