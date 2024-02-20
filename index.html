@@ -12,6 +12,37 @@
     <title>Whack-A-Mario!</title>
 </head>
 <body>
+
+    <h1>Whack-A-Mario</h1>
+
+    <!-- modal and button controls ref(W3Schools) -->
+    <div class="game-info-container">
+        <section class="game-controls">
+            <button id="about-btn" type="button" aria-label="click to read instructions on the game">
+                About Game
+            </button>
+
+            <!-- Modal -->
+            <div id="gameinfomodal" class="modal">
+                <!-- modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Stop The Marios From Escaping!</h2>
+                    <h3>How To Play</h3>
+                    <ul>
+                        <li>On Desktop, use your mouse to click on the marios.</li>
+                        <li>On mobile, tap to hit the marios</li>
+                        <li>For every hit of the mario you will score one point!</li>
+                        <li>The game is over when your time hits 0</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- play game -->
+        <button id="play-btn" type="button" aria-label="play the game">
+            <span id="playButton-Text">Play Game</span>
+        </button>
+    </div>
     
 
 
