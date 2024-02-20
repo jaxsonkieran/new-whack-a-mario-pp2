@@ -105,7 +105,6 @@ h2 {
     /* background image by https://www.freepik.com/free-vector/brown-soil-texture-background_3478044.htm#query=soil%20background&position=2&from_view=keyword&track=ais&uuid=22617858-e0f0-414a-85ae-5cf2136088ea">Image by brgfx on Freepik */
     background: url("../images/20483.jpg");
     background-size: cover;
-    border: 1px solid #FBD000;
     border-radius: 10px;
     /* get the dics in 3x3 format and align to center */
     display: flex;
@@ -121,5 +120,11 @@ h2 {
     height: 180px;
     /* only for style to get the game to work initially */
     border: 1px solid #FBD000;
+}
+
+.mario {
+    /* free image from pixabay */
+    background: url("../images/mario.svg") bottom no-repeat;
+    background-size: 100%;
 }
 

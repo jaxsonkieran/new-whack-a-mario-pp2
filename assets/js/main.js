@@ -16,13 +16,13 @@ const timeLeft = document.querySelector('#time-left');
  */
 
 function randomHole () {
-    // remove the mario class on initial holes so the mario appears on a fresh hole each time
+    // remove the mario class if it's on any of the hole so we get a fresh hole each time
     holes.forEach(hole => {
         hole.classList.remove('mario');
     })
-    // get a random number from 0 - 8 (1-9), as we start counting from 0, for the mario to appear in
+// get a random number from 0 - 8, (1-9), start counting from 0
     let randomHole = holes[Math.floor(Math.random() * 9)];
-    randomHole.classList('mario');
+    randomHole.classList.add('mario');
 }
 
 randomHole();
