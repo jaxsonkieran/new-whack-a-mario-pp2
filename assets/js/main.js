@@ -25,7 +25,16 @@ function randomHole () {
     randomHole.classList.add('mario');
 }
 
-randomHole();
+// create function to move the mole on a specific time interval, this will be attached to the play game btn
+/**
+ * function to move the mole on set interval
+ */
+function moveMario() {
+    let timerId = null
+    timerId = setInterval(randomHole, 600)
+}
+
+moveMario()
 
 // function to record hit on mousedown, each time the mario appears and then add it to the score!
 /**
