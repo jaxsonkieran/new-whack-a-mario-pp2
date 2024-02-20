@@ -11,6 +11,7 @@ const score = document.querySelector('#score');
 
 let hitTheMario;
 let result = 0;
+let gameOver = false;
 // let currentTime = 60;
 
 
