@@ -9,7 +9,8 @@ const mario = document.querySelector('.mario');
 const score = document.querySelector('#score');
 const timeLeft = document.querySelector('#time-left');
 
-
+let hitTheMario;
+let result = 0;
 
 /**
  * function to get the mario to appear in random holes on the container
@@ -23,20 +24,34 @@ function randomHole () {
 // get a random number from 0 - 8, (1-9), start counting from 0
     let randomHole = holes[Math.floor(Math.random() * 9)];
     randomHole.classList.add('mario');
-}
 
-// create function to move the mole on a specific time interval, this will be attached to the play game btn
-/**
- * function to move the mole on set interval
- */
-function moveMario() {
-    let timerId = null
-    timerId = setInterval(randomHole, 600)
+    hitTheMario = randomHole.id;
 }
-
-moveMario()
 
 // function to record hit on mousedown, each time the mario appears and then add it to the score!
 /**
  * this records a hit on mousdown and adds a point to the scoreboard
  */
+holes.forEach(hole => {
+    hole.addEventListener('mousedown', () => {
+        if (hole.id === hitTheMario){
+            result++
+            score.textContent = result
+            hitTheMario = null
+        }
+    })
+})
+
+// create function to move the mole on a specific time interval, this will be attached to the play game btn
+/**
+ * function to move the mole on set interval
+ */
+
+function moveMario() {
+    let timerId = null
+    timerId = setInterval(randomHole, 600)
+}
+
+moveMario();
+
+
