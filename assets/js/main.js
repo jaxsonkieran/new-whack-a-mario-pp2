@@ -11,6 +11,8 @@ const timeLeft = document.querySelector('#time-left');
 
 let hitTheMario;
 let result = 0;
+let currentTime = 60;
+
 
 /**
  * function to get the mario to appear in random holes on the container
@@ -49,9 +51,23 @@ holes.forEach(hole => {
 
 function moveMario() {
     let timerId = null
-    timerId = setInterval(randomHole, 600)
+    timerId = setInterval(randomHole, 800)
 }
 
 moveMario();
 
+// create a function to get the timer to countdown
+/**
+ * function that counts down the time
+ */
+function countDown () {
+    currentTime--
+    timeLeft.textContent = currentTime
 
+    if(currentTime === 0){
+        clearInterval(countDownTimerId);
+        document.getElementById('time-up-alert').style.display = "block";
+    }
+}
+
+let countDownTimerId = setInterval(countDown, 1000);

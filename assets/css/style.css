@@ -98,6 +98,13 @@ h2 {
     font-size: 2vh;
 }
 
+#time-up-alert {
+    background-color: red;
+    color: white;
+    font-size: 5rem;
+    display: none;
+}
+
 
 
 .game-container {
