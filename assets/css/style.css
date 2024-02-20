@@ -64,3 +64,35 @@ h2 {
     background-color: rgba(0,0,0,0.4);
 
 }
+
+/* modal content */
+.modal-content {
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #FBD000;
+    width: 80%;
+    background-color: #43D047;
+}
+
+.close {
+    color: #e52521;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.game-info-container {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-evenly;
+    font-size: 2vh;
+}
+
